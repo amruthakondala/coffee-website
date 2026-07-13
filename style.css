@@ -394,7 +394,7 @@ h1{
     padding-left: 10px;
 }
 .background{
-    background-image: url(../PROJECT/images/background\ coffee.avif);
+    background-image: url(images/background\ coffee.avif);
     background-size: cover; 
     width: 100%;
     min-height: 300px;
