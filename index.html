@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css" >
+    <link rel="stylesheet" href="../PROJECT/style.css">
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        
+    </style>
+    <script type="text/javascript">
+        function coffee(type){
+
+        let hot = document.querySelectorAll(".card-hot");
+        let cold = document.querySelectorAll(".card-cold");
+
+        if(type=="all"){
+        hot.forEach(function(x){x.style.display="block"});
+        cold.forEach(function(x){x.style.display="block"});
+    }
+
+        if(type=="hot"){
+        hot.forEach(function(x){x.style.display="block"});
+        cold.forEach(function(x){x.style.display="none"});
+    }
+
+        if(type=="cold"){
+        hot.forEach(function(x){x.style.display="none"});
+        cold.forEach(function(x){x.style.display="block"});
+    }
+}
+
+    </script>
+</head>
+<body>
+    <header class="head">
+        <nav>
+        <div class="links">
+            <span class="ps-2 bi bi-cup-hot-fill">BREW COFFEE</span>
+           <span class="home" style="padding-left:300px;"><a href="#home">HOME</a></span>
+            <span class="menu"><a href="#menu">MENU</a></span>
+            <span class="about"><a href="#about">ABOUT</a></span>
+            <span class="contact"><a href="#contact">CONTACT</a></span>
+            <span class="order "><BUTTON class="now rounded rounded-pill pt-2 pb-2 ps-1 pe-3">ORDER NOW</BUTTON></span>
+            <span style="color:white;" class="bi bi-cart-plus-fill"><button onclick="openCart()" class="rounded-3 text-bg-dark border border-1"> Cart (<span id="cart-count">0</span>)</button>
+        </div>
+        </nav>
+    </header>
+   
+    <section id="home" class="panel">
+    <main class="main">
+        <div>
+            <div class="main1">
+              <div class="best">best coffee in town</div>
+              <div><span class="fresh">fresh coffee</span><br><span class="every">every morning</span></div><br><br>
+              <div class="start">start your day with cup of freshely brewed coffee<br> made from the finest beans</div>
+            </div>
+        <img src="../PROJECT/images/coffee.1.jpeg" class="image">
+         <div class="explore">
+            <button class=" outer rounded rounded-pill pt-2 pb-2 ps-3 pe-3 "><a href="#3 " class="inner " style="text-decoration: none;">explore menu</a></button>
+         </div>
+        <div class="card" style=" position: absolute; left:73px; top:550px; background-color: rgb(86, 49, 2); color: white;">
+             <h2 class="ps-4">25+</h2>
+             <p>coffee varaities</p>
+        </div>
+        <div class="card" style=" position: absolute; left:200px; top:550px;background-color: rgb(86, 49, 2);color: white; ">
+            <h2 class="ps-4">100%</h2>
+             <p>premium beans</p>
+           </div>
+            <div class="card" style=" position: absolute; left:330px; top:550px;background-color: rgb(86, 49, 2);color: white;">
+            <h2 class="ps-4">5000+</h2>
+             <p>happy customers</p>
+           </div>
+                
+        </div>
+    </main>
+   </section>
+   <section id="menu" class="panel">
+    <div class="coffee">
+        <img src="../PROJECT/images/coffee2.avif" class="picture">
+        <div  class="paragraph"><p  class="firstpara">
+            discover the taste of real coffee</p>
+            <h1 >OUR MENU</h1><p class="secondpara">freshly brewed coffee made with love<br> and the the finest beans</p></div>
+        <img src="../PROJECT/images/coffee3.jpg" class="picture2" >
+    </div>
+    <div class="total">
+    <div class="all">
+        <span class="ps-5"><button onclick="coffee('all')" class="gen ps-3 pe-3 pt-2 pb-2 rounded-5" >All COFFEE</button></span>
+        <span class="ps-5"><button onclick="coffee('hot')" class=" gen2 ps-3 pe-3 pt-2 pb-2 rounded-5"> HOT COFFEE</button></span>  
+        <span class="ps-5"><button onclick="coffee('cold')"class=" gen3 ps-3 pe-3 pt-2 pb-2 rounded-5">COLD COFFEE</button></span>   
+    </div>
+    <div class="cards">
+
+    <div class="card-hot"><img src="../PROJECT/images/Espresso.jpg"style="width:270px; height:250px;">
+    <p class="p1"><b>Espresso</b><br><i>strong and bold cofee shot</i><br>
+    <br><button class="order-btn" onclick="orderCoffee('Espresso',150)">
+    Order Now
+</button></p></div>
+
+    <div class="card-hot"><img src="../PROJECT/images/Cappuccino.avif" style="width:270px; height:250px;"><p class="p2" >
+    <b >Cappuccino</b><br><I class="rich">Rich espresso with steamed milk and foam</I><br>
+    <br><button class="order-btn" onclick="orderCoffee('Cappuccino',200)">
+    Order Now
+</button></p></div>
+
+    <div class="card-hot"><img src="../PROJECT/images/Americano.jpg" style="width:270px; height:250px; "><p class="p3">
+    <b >Americano</b><br><I class="classic">Classic espresso with hot water</I><br>
+    <br><button class="order-btn" onclick="orderCoffee('Americano',160)">Order Now</button></p></div>
+
+    <div class="card-hot"><img src="../PROJECT/images/mocha.jpg" style="width:270px; height:250px;"><p class="p4">
+    <b>Mocha</b><br><I class="classic">Perfect blend of coffee&chocolate</I><br>
+    <br><button class="order-btn" onclick="orderCoffee('Mocha',170)">Order Now</button></p></div>
+
+    <div class="card-cold"><img src="../PROJECT/images/Cold Brew.webp" style="width: 270px; height:250px;"><p class="p5">
+    <b >Cold brew</b><br><I class="chilled">Chilled coffee with refreshing taste</I><br>
+    <br><button class="order-btn" onclick="orderCoffee('Cold brew',180)">Order Now</button>> 
+    </p></div>
+    <div class="card-cold"><img src="../PROJECT/images/Iced Mocha.webp" style="width: 270px; height:250px;"><p class="p6">
+    <b >Iced Mocha</b><br><I class="cool">Cool ,chocalaty and refreshing</I><br>
+    <br><button class="order-btn" onclick="orderCoffee('Iced Mocha',180)">Order Now</button></p></div>
+
+    <div class="card-cold"><img src="../PROJECT/images/Caramel Frappe.jpg" style="width: 270px; height:250px;"><p class="p7">
+    <b >Caramel Frappe</b><br><I class="smooth">Smooth coffee with rich caramel </I><br>
+    <br><button class="order-btn" onclick="orderCoffee('Caramel Frappe',180)">Order Now</button></p></div>
+
+    <div class="card-cold"><img src="../PROJECT/images/Coffee Milkshake.webp" style="width: 270px; height:250px;"><p class="p8">
+    <b >Coffee Milkshake</b><br><I class="cold">Cold, creamy, and caffeinated</I><br>
+    <br><button class="order-btn" onclick="orderCoffee('Coffee Milkshake',190)">Order Now</button></p></div>
+    <div class="background">
+    <p class="offer" ><b>Special Offer</b></p>
+    <p class="buy">BUY 1 GET 1</p>
+    <p style="color:rgb(135, 59, 5) ; line-height:5px; font-size:70px ; font-weight:bolder; padding-left:270px;">FREE</p>
+  </div>
+  </div>
+   </section>
+   <section id="about" class="panel">
+
+    <div class="about-main">
+
+        <div>
+            <img src="../PROJECT/images/mocha.jpg" class="about-img">
+        </div>
+
+        <div class="about-content">
+
+            <p class="about-title">ABOUT US</p>
+
+            <h1 class="about-heading">
+                Brewing Happiness
+                In Every Cup
+            </h1>
+
+            <p class="about-para">
+
+                At Brew Coffee, we believe coffee is more than
+                just a drink. It is an experience that brings
+                people together.
+
+                Our beans are carefully selected and roasted
+                to deliver rich flavor and quality in every cup.
+
+            </p>
+
+            <button class="learn">
+                Learn More
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="stats">
+
+        <div class="box">
+            <h2>10+</h2>
+            <p>Years Experience</p>
+        </div>
+
+        <div class="box">
+            <h2>50+</h2>
+            <p>Coffee Varieties</p>
+        </div>
+
+        <div class="box">
+            <h2>5000+</h2>
+            <p>Happy Customers</p>
+        </div>
+
+        <div class="box">
+            <h2>100%</h2>
+            <p>Premium Beans</p>
+        </div>
+
+    </div>
+</section>
+<section class="why">
+
+<h1>Why Choose Us</h1>
+
+<div class="why-boxes">
+
+<div class="why-box">
+<h3>Premium Beans</h3>
+<p>High quality coffee beans</p>
+</div>
+
+<div class="why-box">
+<h3>Fast Service</h3>
+<p>Quick preparation & delivery</p>
+</div>
+
+<div class="why-box">
+<h3>Fresh Coffee</h3>
+<p>Brewed daily with care</p>
+</div>
+
+</div>
+
+</section>
+<section class="faq">
+
+<h1>FAQ</h1>
+
+<div class="faq-box">
+<h3>Do you provide delivery?</h3>
+<p>Yes, we provide home delivery.</p>
+</div>
+
+<div class="faq-box">
+<h3>Do you use premium beans?</h3>
+<p>Yes, 100% premium beans.</p>
+</div>
+
+<div class="faq-box">
+<h3>Do you have cold coffee?</h3>
+<p>Yes, multiple cold coffee varieties.</p>
+</div>
+</section>
+<section id="contact" class="panel">
+
+    <div class="contact-container">
+
+        <h1 class="contact-heading">CONTACT US</h1>
+
+        <p class="contact-text">
+            We'd love to hear from you. Visit our coffee shop or send us a message.
+        </p>
+
+        <div class="contact-details">
+
+            <div class="contact-box">
+                <h3> Address</h3>
+                <p>123 Coffee Street,<br> Hyderabad, India</p>
+            </div>
+
+            <div class="contact-box">
+                <h3> Phone</h3>
+                <p>+91 98765 43210</p>
+            </div>
+
+            <div class="contact-box">
+                <h3> Email</h3>
+                <p>brewcoffee@gmail.com</p>
+            </div>
+
+        </div>
+
+        <form class="contact-form">
+
+            <input type="text" placeholder="Your Name">
+
+            <input type="email" placeholder="Your Email">
+
+            <textarea rows="5" placeholder="Your Message"></textarea>
+
+            <button class="send-btn">
+                Send Message
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+<footer class="footer">
+    <h4>BREW COFFEE</h4>
+    <p>© 2026 All Rights Reserved</p>
+</footer>
+<div id="cartModal" class="modal">
+
+<div class="modal-content">
+
+<span class="close" onclick="closeCart()">
+&times;
+</span>
+
+<h2>Shopping Cart</h2>
+
+<ul id="cart-items"></ul>
+<p id="empty-msg">Your cart is empty</p>
+<h3>Total: ₹<span id="total">0</span></h3>
+<button onclick="clearCart()">
+Clear Cart
+</button>
+<button onclick="checkout()">
+Checkout
+</button>
+</div>
+</div>
+<script>
+function orderCoffee(name){
+    alert(name + " Ordered Successfully!");
+}
+let cartCount = 0;
+let total = 0;
+
+function orderCoffee(name,price){
+
+    cartCount++;
+    total += price;
+
+    document.getElementById("cart-count").innerHTML = cartCount;
+    document.getElementById("total").innerHTML = total;
+    
+    let li = document.createElement("li");
+li.innerHTML =
+name + " - ₹" + price +
+' <button class="btn btn-danger btn-sm" onclick="removeItem(this,'+price+')">Remove</button>';
+
+document.getElementById("cart-items").appendChild(li);
+
+}
+function removeItem(button,price){
+
+    button.parentElement.remove();
+
+    cartCount--;
+    total -= price;
+
+    document.getElementById("cart-count").innerHTML = cartCount;
+    document.getElementById("total").innerHTML = total;
+
+}
+function clearCart(){
+
+    document.getElementById("cart-items").innerHTML = "";
+
+    cartCount = 0;
+    total = 0;
+
+    document.getElementById("cart-count").innerHTML = 0;
+    document.getElementById("total").innerHTML = 0;
+
+}
+function checkout(){
+
+    alert(
+    "Order Placed Successfully\nTotal Amount ₹" + total
+    );
+
+}
+function openCart(){
+
+    document.getElementById("cartModal").style.display = "block";
+
+}
+
+function closeCart(){
+
+    document.getElementById("cartModal").style.display = "none";
+
+}
+</script>
+
+   <script src="../node_modules/jquery/dist/jquery.js"></script>
+<script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
